@@ -4,7 +4,7 @@ import cssLogo from "../assets/css.png";
 const Header = () => {
   return (
     <header className="text-primary">
-      <div className="pt-12 text-lg font-bold container mx-auto flex justify-between items-center">
+      <div className="p-3 text-lg font-bold container mx-auto flex justify-between items-center">
         <img className="css-logo" src={cssLogo} alt="css logo"></img>
         <nav>
           <ul className="flex space-x-4 gap-8">
