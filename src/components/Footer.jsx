@@ -12,12 +12,12 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="right-half flex">
+      <div className="right-half flex items-center gap-[65px]">
         <div className="nav flex flex-col">
-          <p>UST Computer Science Society</p>
-          <a>About Us</a>
-          <a>Community</a>
-          <a>News & Events</a>
+          <p className="font-bold">UST Computer Science Society</p>
+          <a className="cursor-pointer">About Us</a>
+          <a className="cursor-pointer">Community</a>
+          <a className="cursor-pointer">News & Events</a>
         </div>
         <div className="socials flex flex-col">
           <a>Email</a>
