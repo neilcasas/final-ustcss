@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="text-primary">
       <div className="p-3 text-lg font-bold container mx-auto flex justify-between items-center">
-        <img className="css-logo" src={cssLogo} alt="css logo"></img>
+        <img className="css-logo h-[80px]" src={cssLogo} alt="css logo"></img>
         <nav>
           <ul className="flex space-x-4 gap-8">
             <li>
