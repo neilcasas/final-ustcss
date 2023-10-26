@@ -1,12 +1,13 @@
 import React from "react";
+import cssLogo from "../assets/css.png";
 
 const Header = () => {
   return (
-    <header className="bg-blue-500 p-4 text-white">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">My Simple React Header</h1>
+    <header className="text-primary">
+      <div className="pt-16 text-lg font-bold container mx-auto flex justify-between items-center">
+        <img className="css-logo" src={cssLogo} alt="css logo"></img>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 gap-8">
             <li>
               <a href="/">Home</a>
             </li>
@@ -14,7 +15,10 @@ const Header = () => {
               <a href="/about">About</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/contact">Community</a>
+            </li>
+            <li>
+              <a href="/contact">News & Events</a>
             </li>
           </ul>
         </nav>
