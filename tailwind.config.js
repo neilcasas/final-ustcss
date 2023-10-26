@@ -9,7 +9,9 @@ export default {
     extend: {
       colors: {
         primary: '#287FEB',
-        secondary: '#DDEFFF'
+        secondary: '#DDEFFF',
+        accentpurple:'#6973DB',
+        accentorange: '#D25E00'
       }
     },
   },

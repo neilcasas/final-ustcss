@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Header />
-      <Button text="click me" />
+      <Button text="Click Me" />
     </>
   );
 }
