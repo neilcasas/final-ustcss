@@ -2,12 +2,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex h-[211px] w-auto bg-primary justify-between">
+    <div className="flex h-[211px] w-auto p-10 justify-between bg-primary text-white">
       <div className="left-half flex flex-col justify-center">
         <p>logo</p>
         <p>css headliner</p>
-        <div className="message bg-white rounded-sm">
-          <p>Passionately designed & developed by CSS 💻</p>
+        <div className="message p-1.5 rounded-lg bg-white shadow-lg">
+          <p className="text-primary">
+            Passionately designed & developed by CSS 💻
+          </p>
         </div>
       </div>
       <div className="right-half flex">
