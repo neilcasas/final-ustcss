@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
     font-family: Nunito, sans-serif;
-    padding: 30px;
 }
 
 @layer base {

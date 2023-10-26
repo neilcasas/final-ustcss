@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Divider from "./components/Divider";
 import Tracks from "./components/Tracks";
 import Subjects from "./components/Subjects";
+import LatestPosts from "./components/LatestPosts";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Divider />
       <Subjects />
       <Divider />
+      <LatestPosts />
     </>
   );
 }
