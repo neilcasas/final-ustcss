@@ -23,7 +23,8 @@ export default {
         h4: '37px',
         h5: '26px',
         h6: '22px',
-
+        b1: '18px',
+        b2: '16px',
       }
     },
   },

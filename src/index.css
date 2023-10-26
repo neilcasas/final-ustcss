@@ -4,16 +4,23 @@
 
 body {
     font-family: Nunito, sans-serif;
+    padding: 30px;
 }
 
 @layer base {
     h2 {
-      @apply text-h2 text-primary font-extrabold leading-normal;
+      @apply text-h2 text-center text-primary font-extrabold leading-normal;
     }
     h3 {
-        @apply text-h3 text-primary font-extrabold;
+        @apply text-h3 text-center text-primary font-extrabold;
+    }
+    h5 {
+        @apply text-h5 text-center text-neutralblack font-extrabold;
     }
     h6 {
         @apply text-h6 text-neutralblack font-medium;
+    }
+    .b2 {
+        @apply text-b2 text-neutralgray;
     }
 }
