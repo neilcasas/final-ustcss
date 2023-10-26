@@ -37,19 +37,19 @@ const Footer = () => {
         <div className="socials flex flex-col">
           <div className="flex gap-2">
             <img src={envelopeIcon}></img>
-            <a>Email</a>
+            <a className="cursor-pointer">Email</a>
           </div>
           <div className="flex gap-2">
             <img src={facebookIcon}></img>
-            <a>Facebook</a>
+            <a className="cursor-pointer">Facebook</a>
           </div>
           <div className="flex gap-2">
             <img src={twitterIcon}></img>
-            <a>Twitter</a>
+            <a className="cursor-pointer">Twitter</a>
           </div>
           <div className="flex gap-2">
             <img src={instagramIcon}></img>
-            <a>Instagram</a>
+            <a className="cursor-pointer">Instagram</a>
           </div>
         </div>
       </div>
