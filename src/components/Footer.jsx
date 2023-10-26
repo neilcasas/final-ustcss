@@ -1,4 +1,8 @@
 import React from "react";
+import envelopeIcon from "../assets/envelope-solid.svg";
+import facebookIcon from "../assets/facebook.svg";
+import twitterIcon from "../assets/twitter.svg";
+import instagramIcon from "../assets/instagram.svg";
 
 const Footer = () => {
   return (
@@ -20,10 +24,22 @@ const Footer = () => {
           <a className="cursor-pointer">News & Events</a>
         </div>
         <div className="socials flex flex-col">
-          <a>Email</a>
-          <a>Facebook</a>
-          <a>Twitter</a>
-          <a>Instagram</a>
+          <div className="flex gap-2">
+            <img src={envelopeIcon}></img>
+            <a>Email</a>
+          </div>
+          <div className="flex gap-2">
+            <img src={facebookIcon}></img>
+            <a>Facebook</a>
+          </div>
+          <div className="flex gap-2">
+            <img src={twitterIcon}></img>
+            <a>Twitter</a>
+          </div>
+          <div className="flex gap-2">
+            <img src={instagramIcon}></img>
+            <a>Instagram</a>
+          </div>
         </div>
       </div>
     </div>
