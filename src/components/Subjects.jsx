@@ -8,7 +8,7 @@ const Subjects = () => {
     <div className="main-container flex flex-col items-center justify-center mx-auto my-auto">
       <div className="upper-container text-center m-32">
         <h3>Subjects</h3>
-        <h6>{subjectDescription}</h6>
+        <h6 className="w-[524px]">{subjectDescription}</h6>
         <div className="button-container flex justify-center gap-[15px]">
           <Button text="Data Science" />
           <Button text="Core Science" />
