@@ -13,9 +13,9 @@
     ],
     "Game Development": [
       { "subjectCode": "CS ELEC 1B", "subjectName": "Game Theory and Design" },
-      { "subjectCode": "CS ELEC 1B", "subjectName": "Game Programming I" },
-      { "subjectCode": "CS ELEC 1B", "subjectName": "Game Programming II" },
-      { "subjectCode": "CS ELEC 1B", "subjectName": "Game Production" }
+      { "subjectCode": "CS ELEC 2B", "subjectName": "Game Programming I" },
+      { "subjectCode": "CS ELEC 3B", "subjectName": "Game Programming II" },
+      { "subjectCode": "CS ELEC 4B", "subjectName": "Game Production" }
     ]
   }
   
