@@ -9,9 +9,11 @@ const Subject = (props) => {
         src={placeholder}
         alt={props.subjectCode}
       ></img>
-      <div className="text-container">
-        <h6 className="text-primary">{props.subjectCode}</h6>
-        <h6>{props.subjectName.toUpperCase()}</h6>
+      <div className="interactive-container p-4">
+        <div className="text-container">
+          <h6 className="text-primary font-bold">{props.subjectCode}</h6>
+          <h6>{props.subjectName.toUpperCase()}</h6>
+        </div>
         <Button text="Learn More" />
       </div>
     </div>

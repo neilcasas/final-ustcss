@@ -6,7 +6,7 @@ const subjectDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing e
 const Subjects = () => {
   return (
     <div className="main-container flex flex-col items-center justify-center mx-auto my-auto">
-      <div className="upper-container text-center">
+      <div className="upper-container text-center m-32">
         <h3>Subjects</h3>
         <h6>{subjectDescription}</h6>
         <div className="button-container flex justify-center gap-[15px]">
