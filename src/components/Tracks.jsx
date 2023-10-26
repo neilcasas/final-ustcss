@@ -2,7 +2,7 @@ import Track from "./Track";
 
 const Tracks = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col my-[100px]">
       <h3>Tracks</h3>
       <div className="flex place-content-center gap-[35px]">
         <Track trackName={"Data Science"} />

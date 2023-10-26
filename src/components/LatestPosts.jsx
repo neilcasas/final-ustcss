@@ -3,7 +3,7 @@ import Post from "./Post";
 
 const LatestPosts = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center my-[100px]">
       <h3>Latest Posts</h3>
       <div className="post-container grid grid-cols-4 items-center gap-[30px]">
         <Post postTitle="New Year's eve" date="Jun 18" />

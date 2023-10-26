@@ -8,7 +8,7 @@ const Subject = (props) => {
         className="w-[413px] h-[313px] rounded-2xl"
         src={placeholder}
         alt={props.subjectCode}
-      ></img>
+      />
       <div className="interactive-container p-4">
         <div className="text-container">
           <h6 className="text-primary font-bold">{props.subjectCode}</h6>
