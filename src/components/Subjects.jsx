@@ -5,23 +5,23 @@ const subjectDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing e
 
 const Subjects = () => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto my-auto">
-      <div className="text-center">
+    <div className="main-container flex flex-col items-center justify-center mx-auto my-auto">
+      <div className="upper-container text-center">
         <h3>Subjects</h3>
         <h6>{subjectDescription}</h6>
-        <div className="flex justify-center space-x-2">
+        <div className="button-container flex justify-center gap-[15px]">
           <Button text="Data Science" />
           <Button text="Core Science" />
           <Button text="Game Development" />
         </div>
       </div>
-      <div className="subjects-container">
-        <Subject subjectName="CS" />
-        <Subject subjectName="CS" />
-        <Subject subjectName="CS" />
-        <Subject subjectName="CS" />
-        <Subject subjectName="CS" />
-        <Subject subjectName="CS" />
+      <div className="subjects-container grid grid-cols-3 gap-[40px]">
+        <Subject subjectCode="CS26111" subjectName="Theory of Automata" />
+        <Subject subjectCode="CS26111" subjectName="Theory of Automata" />
+        <Subject subjectCode="CS26111" subjectName="Theory of Automata" />
+        <Subject subjectCode="CS26111" subjectName="Theory of Automata" />
+        <Subject subjectCode="CS26111" subjectName="Theory of Automata" />
+        <Subject subjectCode="CS26111" subjectName="Theory of Automata" />
       </div>
     </div>
   );
