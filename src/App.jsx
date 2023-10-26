@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Header from "./components/Header";
 import Tracks from "./components/Tracks";
+import Subjects from "./components/Subjects";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Tracks />
+      <Subjects />
     </>
   );
 }
