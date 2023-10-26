@@ -1,11 +1,11 @@
-import Button from "./components/Button";
+import Hero from "./components/Hero";
 import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <Header />
-      <Button text="Click Me" />
+      <Hero />
     </>
   );
 }

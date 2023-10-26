@@ -5,3 +5,15 @@
 body {
     font-family: Nunito, sans-serif;
 }
+
+@layer base {
+    h2 {
+      @apply text-h2 text-primary font-extrabold leading-normal;
+    }
+    h3 {
+        @apply text-h3 text-primary font-extrabold;
+    }
+    h6 {
+        @apply text-h6 text-neutralblack font-medium;
+    }
+}
