@@ -9,8 +9,8 @@ const Track = ({ trackName }) => {
   return (
     <div className="flex flex-col items-center w-[372px]">
       <img className="rounded-[35px]" src={placeholder} alt={trackName}></img>
-      <div>
-        <h5>{trackName}</h5>
+      <div className="my-4 mb-7">
+        <h5 className="p-[6.5px]">{trackName}</h5>
         <p className="b2 text-center">{trackDescription}</p>
       </div>
       <Button text={"Learn More"} />
