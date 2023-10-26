@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import postsData from "../../postsData.json";
 
-const LatestPosts = () => {
+const PostCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activePeriod, setActivePeriod] = useState("All");
 
@@ -42,7 +42,7 @@ const LatestPosts = () => {
   };
 
   return (
-    <div className="flex flex-col items-center my-10">
+    <div className="flex flex-col items-center my-10" id="latestposts">
       <h3>Latest Posts</h3>
       <div className="post-container grid grid-cols-4 items-center gap-[30px]">
         {postsToShow.slice(activeIndex, activeIndex + 4).map((post, index) => (
@@ -70,4 +70,4 @@ const LatestPosts = () => {
   );
 };
 
-export default LatestPosts;
+export default PostCarousel;

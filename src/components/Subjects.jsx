@@ -5,7 +5,10 @@ const subjectDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing e
 
 const Subjects = () => {
   return (
-    <div className="main-container flex flex-col items-center justify-center my-[100px]">
+    <div
+      className="main-container flex flex-col items-center justify-center my-[100px]"
+      id="subjects"
+    >
       <div className="upper-container text-center mb-20">
         <h3>Subjects</h3>
         <h6 className="w-[524px] mb-6">{subjectDescription}</h6>

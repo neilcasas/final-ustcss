@@ -1,4 +1,6 @@
+import React from "react";
 import Button from "./Button";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -7,9 +9,15 @@ const Hero = () => {
         <h2>Lorem ipsum dolor sit amet, consectetur adi</h2>
         <h6>incididunt ut labore et dolore magna aliqua</h6>
         <div className="button-container flex space-x-2 items-center justify-center my-10">
-          <Button text="#tracks" />
-          <Button text="#subjects" />
-          <Button text="#latestpage" />
+          <Link to="tracks" smooth={true} offset={-200} duration={1000}>
+            <Button text="#tracks" />
+          </Link>
+          <Link to="subjects" smooth={true} duration={1000}>
+            <Button text="#subjects" />
+          </Link>
+          <Link to="latestposts" smooth={true} duration={1000}>
+            <Button text="#latestpage" />
+          </Link>
         </div>
       </div>
     </div>
