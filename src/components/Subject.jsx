@@ -14,7 +14,9 @@ const Subject = (props) => {
           <h6 className="text-primary font-bold">{props.subjectCode}</h6>
           <h6>{props.subjectName.toUpperCase()}</h6>
         </div>
-        <Button text="Learn More" />
+        <div className="flex place-content-end">
+          <Button text="Learn More" />
+        </div>
       </div>
     </div>
   );
