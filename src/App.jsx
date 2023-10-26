@@ -1,9 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Button from "./components/Button";
+import Header from "./components/Header";
 
 function App() {
-  return <h1 className="text-center text-red-800">tailwindcss</h1>;
+  return (
+    <>
+      <Header />
+      <Button text="click me" />
+    </>
+  );
 }
 
 export default App;
