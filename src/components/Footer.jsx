@@ -1,4 +1,5 @@
 import React from "react";
+import cicsLogo from "../assets/cics.png";
 import envelopeIcon from "../assets/envelope-solid.svg";
 import facebookIcon from "../assets/facebook.svg";
 import twitterIcon from "../assets/twitter.svg";
@@ -6,12 +7,18 @@ import instagramIcon from "../assets/instagram.svg";
 
 const Footer = () => {
   return (
-    <div className="flex h-[211px] w-auto p-10 justify-between bg-primary text-white">
-      <div className="left-half flex flex-col justify-center">
-        <p>logo</p>
-        <p>css headliner</p>
+    <div className="flex h-[211px] w-auto px-24 py-10 justify-between bg-primary text-white">
+      <div className="left-half flex flex-col justify-center items-center">
+        <img
+          className="css-logo flex h-[40px] w-fit"
+          src={cicsLogo}
+          alt="css logo"
+        ></img>
+        <p className="text-center text-xs my-2">
+          University of Santo Tomas College of Computing Sciences
+        </p>
         <div className="message p-1.5 rounded-lg bg-white shadow-lg">
-          <p className="text-primary">
+          <p className="text-primary text-center">
             Passionately designed & developed by CSS 💻
           </p>
         </div>
