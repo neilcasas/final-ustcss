@@ -8,9 +8,6 @@ const PostCarousel = () => {
 
   const postsToShow = postsData.filter((post) => {
     if (activePeriod === "All") return true;
-    // Implement logic to filter posts based on the selected period
-    // For example, compare post dates with the current date
-    // and return true if it matches the selected period.
     return false;
   });
 
@@ -22,7 +19,7 @@ const PostCarousel = () => {
       } else {
         setActiveIndex(0);
       }
-    }, 10000); // 10 seconds
+    }, 10000);
 
     return () => {
       clearInterval(timer);
@@ -44,15 +41,9 @@ const PostCarousel = () => {
   return (
     <div className="flex flex-col items-center my-10" id="latestposts">
       <h3>Latest Posts</h3>
-      <div className="post-container grid grid-cols-4 items-center gap-[30px]">
+      <div className="post-container grid grid-cols-1 sm:grid-cols-4 items-center gap-[30px] mb-9">
         {postsToShow.slice(activeIndex, activeIndex + 4).map((post, index) => (
-          <Post
-            key={index}
-            postTitle={post.postTitle}
-            date={post.date}
-            gradientEnd={true} // Add a prop to apply the gradient
-            onHoverMaximize={true} // Add a prop to apply hover effect
-          />
+          <Post key={index} postTitle={post.postTitle} date={post.date} />
         ))}
       </div>
       <div className="flex justify-center">
