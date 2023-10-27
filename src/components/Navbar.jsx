@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import cssLogo from "../assets/css.png";
+import mobileMenuLogo from "../assets/mobile-menu.svg";
 
-const Header = () => {
+const Navbar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +29,10 @@ const Header = () => {
     };
   }, [prevScrollPos]);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <header
       className={`text-primary sticky top-0 z-50 transition-all duration-300 ${
@@ -36,7 +42,15 @@ const Header = () => {
       <div className="p-3 text-lg font-bold bg-white shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <img className="css-logo h-[80px]" src={cssLogo} alt="css logo"></img>
-          <nav>
+
+          <button
+            className="sm:hidden" // Show on mobile (sm)
+            onClick={toggleMobileMenu}
+          >
+            <img src={mobileMenuLogo} />
+          </button>
+
+          <nav className={`sm:flex ${mobileMenuOpen ? "block" : "hidden"}`}>
             <ul className="flex space-x-4 gap-8">
               <li>
                 <a href="">Home</a>
@@ -58,4 +72,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
