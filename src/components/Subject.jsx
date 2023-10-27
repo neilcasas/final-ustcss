@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Subject = (props) => {
   return (
-    <div className="main-container bg-neutralltgray flex flex-col rounded-2xl">
+    <div className="main-container bg-neutralltgray flex flex-col rounded-2xl max-h-[473px] max-w-[413px]">
       <img className="rounded-2xl" src={placeholder} alt={props.subjectCode} />
       <div className="interactive-container p-4">
         <div className="text-container">

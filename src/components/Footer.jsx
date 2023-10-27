@@ -4,8 +4,6 @@ import envelopeIcon from "../assets/envelope-solid.svg";
 import facebookIcon from "../assets/facebook.svg";
 import twitterIcon from "../assets/twitter.svg";
 import instagramIcon from "../assets/instagram.svg";
-import leftIcon from "../assets/arrow-left.svg";
-import rightIcon from "../assets/arrow-right.svg";
 
 const Footer = () => {
   return (
