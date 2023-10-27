@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import postsData from "../../postsData.json";
+import leftIcon from "../assets/arrow-left.svg";
+import rightIcon from "../assets/arrow-right.svg";
 
 const PostCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,7 +41,10 @@ const PostCarousel = () => {
   };
 
   return (
-    <div className="flex flex-col items-center my-10" id="latestposts">
+    <div
+      className="flex flex-col items-center my-10 justify-center"
+      id="latestposts"
+    >
       <h3>Latest Posts</h3>
       <div className="post-container grid grid-cols-1 sm:grid-cols-4 items-center gap-[30px] mb-9">
         {postsToShow.slice(activeIndex, activeIndex + 4).map((post, index) => (
@@ -47,14 +52,19 @@ const PostCarousel = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <button onClick={movePrev} disabled={activeIndex === 0}>
-          Previous
+        <button
+          className="w-8 h-8"
+          onClick={movePrev}
+          disabled={activeIndex === 0}
+        >
+          <img src={leftIcon} alt="left" />
         </button>
         <button
+          className="w-8 h-8"
           onClick={moveNext}
           disabled={activeIndex + 4 >= postsToShow.length}
         >
-          Next
+          <img src={rightIcon} alt="right" />
         </button>
       </div>
     </div>
