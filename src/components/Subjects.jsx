@@ -35,7 +35,7 @@ const Subjects = () => {
           />
         </div>
       </div>
-      <div className="subjects-container grid grid-cols-3 gap-[40px]">
+      <div className="subjects-container grid sm:grid-cols-3 gap-[40px]">
         {subjectsData[selectedCategory].map((subject, index) => (
           <Subject
             key={index}
