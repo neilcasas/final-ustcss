@@ -4,8 +4,8 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <div className="text-center my-8 sm:my-48">
-      <h2 className="text-4xl sm:text-5xl">
+    <div className="text-center flex flex-col items-center justify-center h-screen">
+      <h2 className="text-4xl leading-relaxed md: text-l sm:text-[66px]">
         Lorem ipsum dolor sit amet, consectetur adi
       </h2>
       <h6 className="text-base sm:text-lg mt-2">

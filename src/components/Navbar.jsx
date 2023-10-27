@@ -50,7 +50,6 @@ const Navbar = () => {
             </a>
           </div>
           <div className="md:hidden">
-            {/* Mobile menu button */}
             <button
               className="p-2"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
