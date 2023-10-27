@@ -43,15 +43,33 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           <img className="css-logo h-[80px]" src={cssLogo} alt="css logo"></img>
 
-          <button
-            className="sm:hidden" // Show on mobile (sm)
-            onClick={toggleMobileMenu}
-          >
-            <img src={mobileMenuLogo} />
-          </button>
+          <div className="relative sm:hidden">
+            <button onClick={toggleMobileMenu}>
+              <img src={mobileMenuLogo} alt="Mobile Menu" />
+            </button>
 
-          <nav className={`sm:flex ${mobileMenuOpen ? "block" : "hidden"}`}>
-            <ul className="flex space-x-4 gap-8">
+            {mobileMenuOpen && (
+              <div className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg">
+                <ul className="py-2">
+                  <li>
+                    <a href="">Home</a>
+                  </li>
+                  <li>
+                    <a href="/about">About</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Community</a>
+                  </li>
+                  <li>
+                    <a href="/contact">News & Events</a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <nav className="sm:flex space-x-4 gap-8">
+            <ul className="flex">
               <li>
                 <a href="">Home</a>
               </li>
