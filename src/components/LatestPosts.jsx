@@ -45,22 +45,22 @@ const PostCarousel = () => {
       className="flex flex-col items-center my-10 justify-center"
       id="latestposts"
     >
-      <h3>Latest Posts</h3>
-      <div className="post-container grid grid-cols-1 sm:grid-cols-4 items-center gap-[30px] mb-9">
+      <h3 className="text-[52px]">Latest Posts</h3>
+      <div className="post-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 items-center gap-4 md:gap-6 lg:gap-8 mb-6">
         {postsToShow.slice(activeIndex, activeIndex + 4).map((post, index) => (
           <Post key={index} postTitle={post.postTitle} date={post.date} />
         ))}
       </div>
       <div className="flex justify-center">
         <button
-          className="w-8 h-8 transform scale-100 hover:scale-110 transition-transform"
+          className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 transform scale-100 hover:scale-110 transition-transform"
           onClick={movePrev}
           disabled={activeIndex === 0}
         >
           <img src={leftIcon} alt="left" />
         </button>
         <button
-          className="w-8 h-8 transform scale-100 hover:scale-110 transition-transform"
+          className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 transform scale-100 hover:scale-110 transition-transform"
           onClick={moveNext}
           disabled={activeIndex + 4 >= postsToShow.length}
         >
