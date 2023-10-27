@@ -7,7 +7,7 @@ enim urna, accumsan id purus vel, dapibus ultricies ligula.`;
 
 const Track = ({ trackName }) => {
   return (
-    <div className="flex flex-col items-center m-5">
+    <div className="flex flex-col items-center max-h-[455px] max-w-[372px] m-5">
       <img className="rounded-[35px]" src={placeholder} alt={trackName} />
       <div className="my-4 mb-7">
         <h5 className="p-[6.5px]">{trackName}</h5>

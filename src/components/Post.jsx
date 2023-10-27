@@ -5,7 +5,7 @@ const Post = (props) => {
   return (
     <div className="relative group">
       <img
-        className="h-[315px] w-[315px] group-hover:scale-110 transition-transform"
+        className="group-hover:scale-110 transition-transform"
         src={placeholder}
         alt="Post"
       />
