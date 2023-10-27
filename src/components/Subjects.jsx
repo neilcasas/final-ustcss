@@ -3,7 +3,7 @@ import Button from "./Button";
 import Subject from "./Subject";
 import subjectsData from "../../subjectsData.json";
 
-const subjectDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut`;
+const subjectDescription = `Learn more about the tracks and subjects offered in UST Computer Science`;
 
 const Subjects = () => {
   const [selectedCategory, setSelectedCategory] = useState("Data Science");
