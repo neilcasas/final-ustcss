@@ -53,14 +53,14 @@ const PostCarousel = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className="w-8 h-8"
+          className="w-8 h-8 transform scale-100 hover:scale-110 transition-transform"
           onClick={movePrev}
           disabled={activeIndex === 0}
         >
           <img src={leftIcon} alt="left" />
         </button>
         <button
-          className="w-8 h-8"
+          className="w-8 h-8 transform scale-100 hover:scale-110 transition-transform"
           onClick={moveNext}
           disabled={activeIndex + 4 >= postsToShow.length}
         >

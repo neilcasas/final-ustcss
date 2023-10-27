@@ -22,7 +22,7 @@ export default {
         h3: '52px',
         h4: '37px',
         h5: '26px',
-        h6: '22px',
+        h6: '21px',
         b1: '18px',
         b2: '16px',
       }
