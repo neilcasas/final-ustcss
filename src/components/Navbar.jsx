@@ -1,92 +1,82 @@
 import React, { useState, useEffect } from "react";
 import cssLogo from "../assets/css.png";
-import mobileMenuLogo from "../assets/mobile-menu.svg";
+import mobileMenu from "../assets/mobile-menu.svg";
 
 const Navbar = () => {
-  const [isHidden, setIsHidden] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   useEffect(() => {
+    let prevScrollPos = window.pageYOffset;
+
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
+      const currentScrollPos = window.pageYOffset;
+      const isScrollingDown = currentScrollPos > prevScrollPos;
 
-      if (currentScrollPos > prevScrollPos) {
-        // Scrolling down, hide the header
-        setIsHidden(true);
-      } else {
-        // Scrolling up, show the header
-        setIsHidden(false);
-      }
+      setShowNav(!isScrollingDown);
 
-      setPrevScrollPos(currentScrollPos);
+      prevScrollPos = currentScrollPos;
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+  }, []);
 
   return (
-    <header
-      className={`text-primary sticky top-0 z-50 transition-all duration-300 ${
-        isHidden ? "transform -translate-y-full" : "transform translate-y-0"
-      }`}
+    <nav
+      className={`fixed top-0 w-full z-10 transition-transform transform ${
+        showNav ? "translate-y-0" : "-translate-y-full"
+      } bg-white shadow-lg`}
     >
-      <div className="p-3 text-lg font-bold bg-white shadow-lg">
-        <div className="container mx-auto flex justify-between items-center">
-          <img className="css-logo h-[80px]" src={cssLogo} alt="css logo"></img>
-
-          <div className="relative sm:hidden">
-            <button onClick={toggleMobileMenu}>
-              <img src={mobileMenuLogo} alt="Mobile Menu" />
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <img src={cssLogo} alt="CSS Logo" className="w-auto h-12 mr-2" />
+          </div>
+          <div className="hidden md:flex space-x-4">
+            <a className="nav-button" href="#">
+              Home
+            </a>
+            <a className="nav-button" href="#">
+              About
+            </a>
+            <a className="nav-button" href="#">
+              Community
+            </a>
+            <a className="nav-button" href="#">
+              News & Events
+            </a>
+          </div>
+          <div className="md:hidden">
+            {/* Mobile menu button */}
+            <button
+              className="p-2"
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+            >
+              <img src={mobileMenu} alt="mobile-menu" />
             </button>
-
-            {mobileMenuOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg right-0">
-                <ul className="py-2">
-                  <li>
-                    <a href="">Home</a>
-                  </li>
-                  <li>
-                    <a href="/about">About</a>
-                  </li>
-                  <li>
-                    <a href="/contact">Community</a>
-                  </li>
-                  <li>
-                    <a href="/contact">News & Events</a>
-                  </li>
-                </ul>
+            {showMobileMenu && (
+              <div className="mt-4">
+                <a href="#" className="nav-button block py-2 text-sm">
+                  Home
+                </a>
+                <a href="#" className="nav-button block py-2 text-sm">
+                  About
+                </a>
+                <a href="#" className="nav-button block py-2 text-sm">
+                  Community
+                </a>
+                <a href="#" className="nav-button block py-2 text-sm">
+                  News & Events
+                </a>
               </div>
             )}
           </div>
-
-          <nav className="hidden sm:flex space-x-4 gap-8">
-            <ul className="flex space-x-4">
-              <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/contact">Community</a>
-              </li>
-              <li>
-                <a href="/contact">News & Events</a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 

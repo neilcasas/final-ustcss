@@ -25,4 +25,7 @@
     .b2 {
         @apply text-b2 text-neutralgray;
     }
+    .nav-button {
+        @apply text-primary text-[18px] font-bold hover:text-accentorange;
+    }
 }
