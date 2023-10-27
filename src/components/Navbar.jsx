@@ -49,7 +49,7 @@ const Navbar = () => {
             </button>
 
             {mobileMenuOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg">
+              <div className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg right-0">
                 <ul className="py-2">
                   <li>
                     <a href="">Home</a>
