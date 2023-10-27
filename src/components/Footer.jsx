@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-2">
             <img src={facebookIcon}></img>
-            <a className="cursor-pointer">Facebook</a>
+            <a href="https://www.facebook.com/USTCSS">Facebook</a>
           </div>
           <div className="flex gap-2">
             <img src={twitterIcon}></img>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-2">
             <img src={instagramIcon}></img>
-            <a className="cursor-pointer">Instagram</a>
+            <a href="https://www.instagram.com/ustcss/">Instagram</a>
           </div>
         </div>
       </div>

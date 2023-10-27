@@ -7,7 +7,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
 
       if (currentScrollPos > prevScrollPos) {
         // Scrolling down, hide the header
@@ -33,7 +33,7 @@ const Header = () => {
         isHidden ? "transform -translate-y-full" : "transform translate-y-0"
       }`}
     >
-      <div className="p-1 text-lg font-bold bg-white shadow-lg">
+      <div className="p-3 text-lg font-bold bg-white shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <img className="css-logo h-[80px]" src={cssLogo} alt="css logo"></img>
           <nav>
