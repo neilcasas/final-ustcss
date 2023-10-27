@@ -68,8 +68,8 @@ const Navbar = () => {
             )}
           </div>
 
-          <nav className="sm:flex space-x-4 gap-8">
-            <ul className="flex">
+          <nav className="hidden sm:flex space-x-4 gap-8">
+            <ul className="flex space-x-4">
               <li>
                 <a href="">Home</a>
               </li>
