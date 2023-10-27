@@ -3,9 +3,9 @@ import placeholder from "../assets/placeholder.png";
 
 const Post = (props) => {
   return (
-    <div className="relative group">
+    <div className="relative group w-[315px] h-[315px]">
       <img
-        className="group-hover:scale-110 transition-transform"
+        className="w-full h-full object-cover group-hover:scale-110 transition-transform"
         src={placeholder}
         alt="Post"
       />
